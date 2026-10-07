@@ -11,20 +11,6 @@ docker compose up -d
 Open <http://localhost:8080/install.php> and create the admin account (pick the
 ACL option, superuser). Then delete `data/dokuwiki/install.php` if prompted.
 
-## Free hosting on GitHub Pages (no server, no commands)
-
-A GitHub Action (`.github/workflows/pages.yml`) builds a read-only static copy of the
-wiki from `content/pages/` on every push to `main` and publishes it.
-
-1. Merge this branch into `main`.
-2. In the repo go to **Settings > Pages** and set **Source** to **GitHub Actions**.
-3. After the Action finishes, the site is at `https://<user>.github.io/bicivil-wiki/`.
-
-To edit: open a file in `content/pages/` on github.com, click the pencil, save.
-The site updates in about a minute. The published copy has no login or search;
-run the Docker setup above if you need a live, editable wiki.
-Preview locally with `scripts/build-static.sh` (output in `site/`).
-
 ## Layout
 
 | Path | Purpose |
