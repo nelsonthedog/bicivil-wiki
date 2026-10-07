@@ -1,71 +1,116 @@
-/* Bcivil theme: classic, flat, square. Blue + white on top of the default DokuWiki template */
+/* Bcivil theme: blocky, square, Minecraft/Civ feel. Blue + white on top of the default DokuWiki template */
 :root {
   --bc-blue: #1f4e99;
+  --bc-blue-hi: #2f6fd6;
   --bc-blue-dark: #153a75;
   --bc-blue-light: #e6edf8;
-  --bc-border: #b9c7de;
+  --bc-stone: #c9d2e0;
+  --bc-stone-dark: #7d8ba3;
   --bc-text: #1a1a1a;
 }
 
 /* no rounded corners or shadows anywhere */
 *, *::before, *::after { border-radius: 0 !important; box-shadow: none !important; text-shadow: none !important; }
 
-body, #dokuwiki__site { background: #fff; color: var(--bc-text); }
+/* stone-tile page background */
+#dokuwiki__site { background: transparent !important; }
+body { background: transparent !important; color: var(--bc-text); }
+html {
+  background-color: #e4eaf4;
+  background-image:
+    linear-gradient(45deg, rgba(31,78,153,.09) 25%, transparent 25%, transparent 75%, rgba(31,78,153,.09) 75%),
+    linear-gradient(45deg, rgba(31,78,153,.09) 25%, transparent 25%, transparent 75%, rgba(31,78,153,.09) 75%);
+  background-size: 32px 32px, 32px 32px; background-position: 0 0, 16px 16px; background-repeat: repeat !important;
+}
 body { font-family: Verdana, Tahoma, Arial, sans-serif; font-size: 14px; }
+#dokuwiki__site > .site { background: transparent; }
 
-/* header: plain blue bar */
-#dokuwiki__header { background: var(--bc-blue); margin: 0; padding: 0; border-bottom: 4px solid var(--bc-blue-dark); }
+/* header: lapis blocks with a stone-brick edge */
+#dokuwiki__header {
+  margin: 0; padding: 0;
+  background-color: var(--bc-blue);
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.06) 50%, transparent 50%),
+    linear-gradient(rgba(255,255,255,.06) 50%, transparent 50%);
+  background-size: 48px 48px;
+  border: 3px solid; border-color: var(--bc-blue-hi) var(--bc-blue-dark) var(--bc-blue-dark) var(--bc-blue-hi);
+  border-bottom: 10px solid var(--bc-blue-dark);
+  background-clip: padding-box;
+}
 #dokuwiki__header .group { padding: .8em 1.2em; }
 #dokuwiki__header .group.headings { margin: 0; }
 #dokuwiki__header .tools { min-height: 0; margin: 0; }
-#dokuwiki__header h1 { border: 0; padding: 0; }
-#dokuwiki__header h1 a, #dokuwiki__header h1 a span { color: #fff; font-weight: bold; font-family: Georgia, "Times New Roman", serif; letter-spacing: 0; }
-#dokuwiki__header h1 img { height: 2.4em; width: 2.4em; }
-#dokuwiki__header .claim, #dokuwiki__header p.claim { color: #dbe5f5; }
+#dokuwiki__header h1 { border: 0; padding: 0; background: none; }
+#dokuwiki__header h1 a, #dokuwiki__header h1 a span {
+  color: #fff; font-family: "Courier New", Courier, monospace; font-weight: bold; font-size: 1.15em;
+  letter-spacing: .12em; text-transform: uppercase;
+}
+#dokuwiki__header h1 img { height: 3em; width: 3em; image-rendering: pixelated; }
+#dokuwiki__header .claim, #dokuwiki__header p.claim { color: #dbe5f5; font-family: "Courier New", Courier, monospace; letter-spacing: .04em; }
 #dokuwiki__header a { color: #fff; }
 #dokuwiki__header a:hover { color: #dbe5f5; }
 
-/* breadcrumbs */
-.dokuwiki div.breadcrumbs { background: var(--bc-blue-light); border: 0; border-bottom: 1px solid var(--bc-border); margin: 0; padding: .4em 1.2em; color: #444; }
-.dokuwiki div.breadcrumbs a { color: var(--bc-blue); }
+/* breadcrumbs as an inset slot */
+.dokuwiki div.breadcrumbs { background: transparent; border: 0; margin: 0; padding: 0; }
+#dokuwiki__header .breadcrumbs { margin-top: .6em; padding: .3em .8em; background: var(--bc-blue-dark); border: 2px solid; border-color: #0e2a57 var(--bc-blue-hi) var(--bc-blue-hi) #0e2a57; }
+#dokuwiki__header .breadcrumbs, #dokuwiki__header .breadcrumbs strong, #dokuwiki__header .breadcrumbs span, #dokuwiki__header .breadcrumbs bdi { color: #dbe5f5; font-family: "Courier New", Courier, monospace; }
+#dokuwiki__header .breadcrumbs a { color: #fff; }
 .dokuwiki div.breadcrumbs div.youarehere, .dokuwiki div.breadcrumbs div.trace { border: 0; padding: 0; margin: 0; }
-#dokuwiki__header .breadcrumbs { margin-top: .6em; }
-#dokuwiki__header .breadcrumbs, #dokuwiki__header .breadcrumbs strong, #dokuwiki__header .breadcrumbs span, #dokuwiki__header .breadcrumbs bdi { color: #333; }
-#dokuwiki__header .breadcrumbs a { color: var(--bc-blue); }
 
-/* sidebar */
-.dokuwiki #dokuwiki__aside .pad { background: var(--bc-blue-light); border: 1px solid var(--bc-border); padding: .8em 1em; margin-top: 1.3em; }
-.dokuwiki #dokuwiki__aside strong { color: var(--bc-blue-dark); display: block; margin-top: .6em; border-bottom: 1px solid var(--bc-border); padding-bottom: .2em; }
-.dokuwiki #dokuwiki__aside ul { list-style: none; padding: 0; margin: .4em 0 .8em; }
-.dokuwiki #dokuwiki__aside li { margin: 0; padding: 0; }
-.dokuwiki #dokuwiki__aside li a { display: block; padding: .25em .5em; }
-.dokuwiki #dokuwiki__aside li a:hover { background: #fff; text-decoration: none; }
-.dokuwiki #dokuwiki__aside li a.curid { background: #fff; font-weight: bold; border-left: 3px solid var(--bc-blue); }
-
-/* content */
-.dokuwiki div.page { background: #fff; border: 1px solid var(--bc-border); padding: 1.2em 1.8em; margin-top: 1.3em; }
+/* bevelled panel look (like a Minecraft GUI window) */
+.dokuwiki #dokuwiki__aside .pad, .dokuwiki div.page {
+  background: #f6f8fc;
+  border: 3px solid; border-color: #fff var(--bc-stone-dark) var(--bc-stone-dark) #fff;
+  outline: 2px solid var(--bc-blue-dark);
+  margin-top: 1.4em;
+}
+.dokuwiki #dokuwiki__aside .pad { padding: .8em 1em; background: var(--bc-stone); }
+.dokuwiki div.page { padding: 1.2em 1.8em; }
 .dokuwiki .pageId { display: none; }
 
-/* headings */
-.dokuwiki h1, .dokuwiki h2, .dokuwiki h3, .dokuwiki h4 { color: var(--bc-blue-dark); font-family: Georgia, "Times New Roman", serif; font-weight: bold; }
-.dokuwiki h1 { font-size: 1.9em; border-bottom: 2px solid var(--bc-blue); padding-bottom: .2em; }
-.dokuwiki h2 { font-size: 1.4em; border-bottom: 1px solid var(--bc-border); }
+/* sidebar entries as buttons */
+.dokuwiki #dokuwiki__aside strong { color: var(--bc-blue-dark); display: block; margin-top: .6em; font-family: "Courier New", Courier, monospace; text-transform: uppercase; letter-spacing: .08em; border-bottom: 2px solid var(--bc-blue-dark); padding-bottom: .2em; }
+.dokuwiki #dokuwiki__aside ul { list-style: none; padding: 0; margin: .5em 0 .8em; }
+.dokuwiki #dokuwiki__aside li { margin: 0 0 4px; padding: 0; }
+.dokuwiki #dokuwiki__aside li a {
+  display: block; padding: .3em .6em; background: #eef2f8; color: var(--bc-blue-dark);
+  border: 2px solid; border-color: #fff var(--bc-stone-dark) var(--bc-stone-dark) #fff;
+}
+.dokuwiki #dokuwiki__aside li a:hover { background: var(--bc-blue-hi); color: #fff; text-decoration: none; border-color: #6c9bea #153a75 #153a75 #6c9bea; }
+.dokuwiki #dokuwiki__aside li a.curid { background: var(--bc-blue); color: #fff; font-weight: bold; border-color: var(--bc-blue-hi) #0e2a57 #0e2a57 var(--bc-blue-hi); }
+
+/* page title as a blue plaque */
+.dokuwiki h1 {
+  background: var(--bc-blue); color: #fff; font-family: "Courier New", Courier, monospace; font-size: 1.6em;
+  text-transform: uppercase; letter-spacing: .08em; padding: .45em .7em; margin: 0 0 .9em;
+  border: 3px solid; border-color: var(--bc-blue-hi) var(--bc-blue-dark) var(--bc-blue-dark) var(--bc-blue-hi);
+}
+.dokuwiki h2, .dokuwiki h3, .dokuwiki h4 { color: var(--bc-blue-dark); font-family: "Courier New", Courier, monospace; font-weight: bold; letter-spacing: .04em; }
+.dokuwiki h2 { font-size: 1.3em; border-bottom: 4px solid var(--bc-stone); padding-bottom: .15em; }
+.dokuwiki h3 { font-size: 1.1em; }
 
 /* links */
 .dokuwiki a:link, .dokuwiki a:visited, .dokuwiki a.wikilink1:link, .dokuwiki a.wikilink1:visited { color: var(--bc-blue); }
 .dokuwiki a.wikilink2:link, .dokuwiki a.wikilink2:visited { color: #b00020; }
 .dokuwiki a:hover { color: var(--bc-blue-dark); text-decoration: underline; }
 
-/* tables: plain grid */
-.dokuwiki table.inline { border: 1px solid var(--bc-border); border-collapse: collapse; background: #fff; }
-.dokuwiki table.inline th { background: var(--bc-blue); color: #fff; border: 1px solid var(--bc-blue-dark); padding: .4em .7em; text-align: left; }
-.dokuwiki table.inline td { border: 1px solid var(--bc-border); padding: .4em .7em; }
-.dokuwiki table.inline tr:nth-child(even) td { background: #f3f6fb; }
+/* tables: block grid */
+.dokuwiki table.inline { border: 2px solid var(--bc-blue-dark); border-collapse: collapse; background: #fff; }
+.dokuwiki table.inline th { background: var(--bc-blue); color: #fff; border: 1px solid var(--bc-blue-dark); padding: .45em .8em; text-align: left; font-family: "Courier New", Courier, monospace; text-transform: uppercase; letter-spacing: .05em; }
+.dokuwiki table.inline td { border: 1px solid var(--bc-stone); padding: .45em .8em; }
+.dokuwiki table.inline tr:nth-child(even) td { background: #eef2f8; }
 
-/* code and buttons */
-.dokuwiki code { background: var(--bc-blue-light); color: var(--bc-blue-dark); padding: .05em .3em; }
-.dokuwiki pre { background: #f3f6fb; border: 1px solid var(--bc-border); }
-.dokuwiki button, .dokuwiki input[type=submit], .dokuwiki input[type=button] { background: var(--bc-blue); color: #fff; border: 1px solid var(--bc-blue-dark); padding: .3em .9em; cursor: pointer; }
-.dokuwiki button:hover, .dokuwiki input[type=submit]:hover { background: var(--bc-blue-dark); }
+/* code, quotes, buttons */
+.dokuwiki code { background: var(--bc-blue-light); color: var(--bc-blue-dark); padding: .05em .35em; border: 1px solid var(--bc-stone); font-family: "Courier New", Courier, monospace; }
+.dokuwiki pre { background: #eef2f8; border: 2px solid var(--bc-stone-dark); }
+.dokuwiki blockquote { border-left: 6px solid var(--bc-blue); background: var(--bc-blue-light); margin-left: 0; padding: .4em 1em; }
+.dokuwiki button, .dokuwiki input[type=submit], .dokuwiki input[type=button] {
+  background: var(--bc-blue); color: #fff; padding: .3em .9em; cursor: pointer;
+  border: 2px solid; border-color: var(--bc-blue-hi) #0e2a57 #0e2a57 var(--bc-blue-hi);
+}
+.dokuwiki button:hover, .dokuwiki input[type=submit]:hover { background: var(--bc-blue-hi); }
 
-#dokuwiki__footer { color: #555; }
+#dokuwiki__footer { color: #444; }
+
+/* let the stone-tile background show through the whole layout */
+#dokuwiki__site > .site, #dokuwiki__top, .dokuwiki .wrapper, #dokuwiki__content, #dokuwiki__aside, #dokuwiki__footer, .dokuwiki #dokuwiki__content > .pad { background: transparent !important; }
