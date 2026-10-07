@@ -1,0 +1,13 @@
+====== FAQ ======
+
+===== How do I join? =====
+See [[guides:getting_started]].
+
+===== How do I protect my builds? =====
+See [[guides:claims]].
+
+===== How do I appeal a ban? =====
+//Describe your appeal process, e.g. a Discord ticket or form.//
+
+===== Can I play on Bedrock? =====
+//Yes/No - add details.//

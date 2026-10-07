@@ -1,0 +1,11 @@
+====== Claims ======
+
+Claims stop other players from building or opening chests on your land.
+
+===== How to claim =====
+
+//Describe the claim tool, e.g. a golden shovel, and the relevant commands.//
+
+===== Trusting friends =====
+
+//Describe how to add friends to a claim.//

@@ -1,0 +1,8 @@
+====== Staff ======
+
+^ Name ^ Role ^
+| //name// | Owner |
+| //name// | Admin |
+| //name// | Moderator |
+
+Need help? Ask in Discord or use ''/helpop''.

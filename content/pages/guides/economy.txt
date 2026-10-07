@@ -1,0 +1,6 @@
+====== Economy ======
+
+//Explain how players earn and spend money: shops, jobs, selling, taxes.//
+
+  * Check balance: ''/balance''
+  * Pay others: ''/pay''

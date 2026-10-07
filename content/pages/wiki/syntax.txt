@@ -1,0 +1,13 @@
+====== Editing Help ======
+
+Full reference: [[https://www.dokuwiki.org/wiki:syntax|DokuWiki syntax]]
+
+^ You type ^ You get ^
+| ''**bold**'' | **bold** |
+| ''//italic//'' | //italic// |
+| ''[[server:rules|Rules]]'' | link to a page |
+| ''  * item'' | bullet list |
+| ''  - item'' | numbered list |
+| ''====== Title ======'' | page heading |
+
+Pages are plain ''.txt'' files in ''content/pages/''. Namespaces are folders: ''[[guides:claims]]'' is ''guides/claims.txt''.

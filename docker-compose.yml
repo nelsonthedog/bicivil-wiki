@@ -1,0 +1,19 @@
+services:
+  dokuwiki:
+    image: lscr.io/linuxserver/dokuwiki:latest
+    container_name: bcivil-wiki
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    ports:
+      - "8080:80"
+    volumes:
+      # Persistent DokuWiki install (users, plugins, templates, revisions, cache)
+      - ./data:/config
+      # Wiki content tracked in git - edit pages on disk or in the browser
+      - ./content/pages:/config/dokuwiki/data/pages
+      - ./content/media:/config/dokuwiki/data/media
+      # Site settings tracked in git
+      - ./conf/local.php:/config/dokuwiki/conf/local.php

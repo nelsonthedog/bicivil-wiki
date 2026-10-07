@@ -1,0 +1,18 @@
+====== Getting Started ======
+
+===== 1. Connect =====
+
+  - Open Minecraft Java Edition (1.21.x).
+  - Multiplayer -> Add Server -> enter ''play.bcivil.example''.
+
+===== 2. Spawn =====
+
+Read the signs at spawn, then use ''/spawn'' any time to return.
+
+===== 3. Settle and protect =====
+
+Find a spot, build a shelter, and [[guides:claims|claim your land]].
+
+===== 4. Join the community =====
+
+Hop in Discord, meet your neighbours, and check the [[community:start|community page]].

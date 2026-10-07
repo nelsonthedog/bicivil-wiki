@@ -1,0 +1,24 @@
+====== Welcome to the Bcivil Wiki ======
+
+This is the official guide to **Bcivil**, our Minecraft server.
+
+  * **Server address:** ''play.bcivil.example'' //(replace with your real IP)//
+  * **Version:** 1.21.x Java Edition
+  * **Discord:** [[https://discord.gg/your-invite|Join our Discord]]
+
+===== New here? =====
+
+  - Read the [[server:rules|server rules]].
+  - Follow the [[guides:getting_started|getting started guide]].
+  - Learn how to [[guides:claims|protect your builds]].
+  - Check the [[guides:commands|command list]].
+
+===== Explore =====
+
+^ Section ^ What's inside ^
+| [[server:start|Server]] | Rules, info, plugins, world map |
+| [[guides:start|Guides]] | Getting started, claims, economy, commands |
+| [[community:start|Community]] | Staff, events, ranks |
+| [[faq|FAQ]] | Quick answers to common questions |
+
+//Want to help improve this wiki? Ask a staff member for an account.//

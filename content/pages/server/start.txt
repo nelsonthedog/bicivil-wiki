@@ -1,0 +1,4 @@
+====== Server ======
+
+  * [[server:rules|Rules]]
+  * [[server:info|Server info & plugins]]

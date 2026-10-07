@@ -1,0 +1,15 @@
+**Bcivil**
+
+  * [[start|Home]]
+  * [[server:rules|Rules]]
+  * [[guides:getting_started|Getting Started]]
+  * [[guides:commands|Commands]]
+  * [[guides:claims|Claims]]
+  * [[guides:economy|Economy]]
+  * [[community:staff|Staff]]
+  * [[faq|FAQ]]
+
+**Wiki**
+
+  * [[wiki:syntax|Editing help]]
+  * [[:playground:playground|Sandbox]]

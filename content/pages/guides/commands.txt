@@ -1,0 +1,11 @@
+====== Commands ======
+
+//Edit this table to match the plugins you actually run.//
+
+^ Command ^ What it does ^
+| ''/spawn'' | Teleport to spawn |
+| ''/home'' / ''/sethome'' | Go to / set your home |
+| ''/tpa <player>'' | Request to teleport to a player |
+| ''/msg <player> <text>'' | Private message |
+| ''/balance'' | Check your money |
+| ''/pay <player> <amount>'' | Send money |

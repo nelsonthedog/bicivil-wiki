@@ -1,0 +1,15 @@
+====== Server Info ======
+
+^ Setting ^ Value ^
+| Address | ''play.bcivil.example'' |
+| Game mode | Survival / civilization |
+| Version | 1.21.x |
+| World border | //TBD// |
+| Map | //link to Dynmap/BlueMap// |
+
+===== Plugins =====
+
+//List the plugins you run and what they do.//
+
+  * **Claims plugin** - protects builds, see [[guides:claims]]
+  * **Economy plugin** - see [[guides:economy]]

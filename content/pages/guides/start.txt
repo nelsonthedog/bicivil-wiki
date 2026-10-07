@@ -1,0 +1,6 @@
+====== Guides ======
+
+  * [[guides:getting_started|Getting started]]
+  * [[guides:commands|Commands]]
+  * [[guides:claims|Claims]]
+  * [[guides:economy|Economy]]

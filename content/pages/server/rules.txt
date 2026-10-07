@@ -1,0 +1,20 @@
+====== Server Rules ======
+
+Breaking these rules can result in a warning, mute, kick, or ban.
+
+  - **Be respectful.** No harassment, hate speech, or toxicity.
+  - **No griefing or stealing.** Do not damage or take from builds that aren't yours, unless claim rules say otherwise.
+  - **No cheating.** X-ray, hacked clients, fly/speed hacks, and duping are bannable.
+  - **No exploiting bugs.** Report them to staff instead.
+  - **No spam or advertising** in chat.
+  - **No lag machines.** Keep redstone and mob farms reasonable.
+  - **Follow staff instructions.**
+
+===== Punishments =====
+
+^ Offence ^ Typical result ^
+| Minor chat offence | Warning / mute |
+| Griefing | Rollback + temp ban |
+| Cheating | Permanent ban |
+
+//Staff have final say. Appeals go through [[faq#how_do_i_appeal_a_ban|the appeal process]].//
