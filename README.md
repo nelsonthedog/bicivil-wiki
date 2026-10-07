@@ -11,6 +11,15 @@ docker compose up -d
 Open <http://localhost:8080/install.php> and create the admin account (pick the
 ACL option, superuser). Then delete `data/dokuwiki/install.php` if prompted.
 
+## Offline preview (just double-click)
+
+Download this repo as a ZIP (green **Code** button > **Download ZIP**), unzip it, and
+double-click **`index.html`**. It opens a read-only copy of the wiki in your browser,
+no server or install needed. It has no login, search or editing.
+
+The copy lives in `preview/` and is generated from `content/pages/`. After changing
+pages, regenerate it with `scripts/build-static.sh` (needs php, curl, wget), or ask Claude to.
+
 ## Layout
 
 | Path | Purpose |

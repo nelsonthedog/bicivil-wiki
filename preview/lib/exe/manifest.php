@@ -1,0 +1,1 @@
+{"display":"standalone","scope":"\/","name":"Bcivil Wiki","short_name":"Bcivil Wiki","description":"The official guide to the Bcivil Minecraft server","start_url":"\/","background_color":"#fff","theme_color":"#008800","icons":[]}
