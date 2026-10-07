@@ -17,3 +17,4 @@ services:
       - ./content/media:/config/dokuwiki/data/media
       # Site settings tracked in git
       - ./conf/local.php:/config/dokuwiki/conf/local.php
+      - ./conf/userstyle.css:/config/dokuwiki/conf/userstyle.css

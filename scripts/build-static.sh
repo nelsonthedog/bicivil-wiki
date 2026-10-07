@@ -14,6 +14,8 @@ rm -rf data/pages data/media
 cp -r "$ROOT/content/pages" data/pages
 cp -r "$ROOT/content/media" data/media
 cp "$ROOT/conf/local.php" conf/local.php
+cp "$ROOT/conf/userstyle.css" conf/userstyle.css
+mkdir -p data/media/wiki && cp "$ROOT/content/media/wiki/logo.svg" data/media/wiki/ 2>/dev/null || true
 cat >> conf/local.php <<'PHP'
 // static build overrides: no logins/editing/search in the published copy
 $conf['useacl'] = 0;
@@ -29,7 +31,7 @@ sleep 2
 rm -rf "$ROOT/preview"; mkdir "$ROOT/preview"
 cd "$ROOT/preview"
 wget --mirror --page-requisites --convert-links --adjust-extension --no-host-directories \
-     --restrict-file-names=windows --no-parent --reject-regex '[?](do|idx|rev|tab_details|tab_files|image|media)=' -e robots=off --quiet "http://127.0.0.1:$PORT/" || true
+     --restrict-file-names=windows --no-parent --reject-regex '[?](do|idx|rev|tab_details|tab_files|image)=' -e robots=off --quiet "http://127.0.0.1:$PORT/" || true
 [ -f index.html ] || { echo "build failed: no index.html"; exit 1; }
 rm -f feed.php lib/exe/taskrunner*
 # give scripts a .js extension so GitHub Pages serves the right content type
@@ -39,5 +41,13 @@ find . -name '*.html' -print0 | xargs -0 sed -i -E \
   -e 's#<script[^>]*taskrunner[^>]*></script>##g' \
   -e 's#</head>#<style>.secedit,.editbutton_section{display:none}</style></head>#' \
   -e 's#<div class="no">.*taskrunner[^<]*</div>##g'
+# logo: use the real file instead of the fetch.php URL (works offline, any depth)
+cp "$ROOT/content/media/wiki/logo.svg" logo.svg 2>/dev/null || true
+find . -name '*.html' | while read -r f; do
+  depth=$(printf '%s' "$f" | tr -cd / | wc -c); prefix=""
+  for ((i=1; i<depth; i++)); do prefix="../$prefix"; done
+  sed -i -E "s#src=\"[^\"]*logo\.svg[^\"]*\"#src=\"${prefix}logo.svg\"#g" "$f"
+done
+rm -rf lib/exe/fetch.php* _media
 touch .nojekyll
 echo "Built $(find . -name "*.html" | wc -l) pages into $ROOT/preview"

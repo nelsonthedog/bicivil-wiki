@@ -1,1 +1,1 @@
-{"display":"standalone","scope":"\/","name":"Bcivil Wiki","short_name":"Bcivil Wiki","description":"The official guide to the Bcivil Minecraft server","start_url":"\/","background_color":"#fff","theme_color":"#008800","icons":[]}
+{"display":"standalone","scope":"\/","name":"Bcivil Wiki","short_name":"Bcivil Wiki","description":"The official guide to the Bcivil Minecraft server","start_url":"\/","background_color":"#fff","theme_color":"#008800","icons":[{"src":"http:\/\/127.0.0.1:8099\/_media\/wiki\/logo.svg","sizes":"17x17 512x512","type":"image\/svg+xml"}]}
