@@ -17,4 +17,4 @@ Breaking these rules can result in a warning, mute, kick, or ban.
 | Griefing | Rollback + temp ban |
 | Cheating | Permanent ban |
 
-//Staff have final say. Appeals go through [[faq#how_do_i_appeal_a_ban|the appeal process]].//
+//Staff have final say. Appeals go through [[:faq#how_do_i_appeal_a_ban|the appeal process]].//

@@ -1,0 +1,3 @@
+====== Sandbox ======
+
+Try out the wiki syntax here. See [[:wiki:syntax|editing help]].

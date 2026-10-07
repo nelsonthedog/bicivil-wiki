@@ -1,0 +1,4 @@
+====== Wiki ======
+
+  * [[:wiki:syntax|Editing help]]
+  * [[:playground:playground|Sandbox]]

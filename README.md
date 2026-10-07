@@ -27,4 +27,4 @@ ACL option, superuser). Then delete `data/dokuwiki/install.php` if prompted.
 - Registration is disabled in `conf/local.php`; staff create users via Admin > User Manager.
 - Put a reverse proxy (Caddy/nginx) with HTTPS in front before exposing it publicly.
 
-> Note: the compose file has not been tested against a live container yet.
+> Note: the pages and `conf/local.php` were tested on DokuWiki 2026-07-14c via PHP's built-in server. The Docker compose file itself has not been run.
