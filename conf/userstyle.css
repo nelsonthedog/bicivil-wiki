@@ -137,3 +137,13 @@ body { font-family: Verdana, Tahoma, Arial, sans-serif; font-size: 14px; }
 .home #dokuwiki__header h1 { white-space: nowrap; }
 .home #dokuwiki__header .group.headings { padding-top: 90px; }
 .home #dokuwiki__header .claim, .home #dokuwiki__header p.claim { white-space: nowrap; }
+
+/* compact hero */
+.home #dokuwiki__header { min-height: 130px; background-position: center 30%; }
+.home #dokuwiki__header .group.headings { padding-top: 14px; padding-bottom: 0; }
+.home #dokuwiki__header img { height: 2.6em; width: 2.6em; }
+.home #dokuwiki__header h1 a, .home #dokuwiki__header h1 a span { font-size: 1.15em; }
+.home #dokuwiki__header .claim, .home #dokuwiki__header p.claim { font-size: .95em; }
+.home #dokuwiki__header .breadcrumbs { bottom: 10px; }
+.home #dokuwiki__header { min-height: 190px; background-position: center 18%; }
+.home #dokuwiki__header .group.headings { padding-top: 22px; }
