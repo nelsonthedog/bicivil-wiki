@@ -20,6 +20,11 @@ no server or install needed. It has no login, search or editing.
 The copy lives in `preview/` and is generated from `content/pages/`. After changing
 pages, regenerate it with `scripts/build-static.sh` (needs php, curl, wget), or ask Claude to.
 
+## Fonts and credits
+
+- Titles use [Pixelify Sans](https://fonts.google.com/specimen/Pixelify+Sans) (SIL Open Font License 1.1), bundled in `conf/fonts/` and embedded in `conf/userstyle.css`. Body text uses the system sans-serif.
+- The home page banner image is a build by Coastline Creations. Make sure you have permission to use it.
+
 ## Layout
 
 | Path | Purpose |
